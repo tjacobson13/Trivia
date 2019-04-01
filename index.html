@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.slim.js"
+  integrity="sha256-fNXJFIlca05BIO2Y5zh1xrShK3ME+/lYZ0j+ChxX2DA="
+  crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <h1 id="question">
+
+    </h1>
+    <div id="answer0">.</div>
+    <div id="answer1">.</div>
+    <div id="answer2">.</div>
+    <div id="answer3">.</div>
+   
+    <div><hr/></div>
+    <div id="next">Next</div>
+    <div id="correct"></div>
+
+    <script>
+ 
+ var game = {
+  correct: 0,
+
+  questions: [
+    "Where was bread invented?",
+    "What color is the Whitehouse?",
+    "Where is the Eiffel Tower?",
+    "What is the capital of Texas?"
+  ],
+  answers: [
+    ["Italy", "Japan", "Egypt", "Canada"],
+    ["White", "Black", "Green", "Purple"],
+    ["England", "France", "Germany", "Bulgaria"],
+    ["Dallas", "Austin", "Houston", "Atlanta"]
+  ],
+  answer: ["Egypt", "White", "France", "Dallas"]
+};
+console.log(game.answer[0])
+
+
+$('#question').text(game.questions[0]);
+$('#answer0').text(game.answers[0][0]);
+$('#answer1').text(game.answers[0][1]);
+$('#answer2').text(game.answers[0][2]);
+$('#answer3').text(game.answers[0][3]);
+
+$( "#answer0" ).on( "click", function() {
+    if ($(`#answer0:contains('${game.answer[0]}')`).length) {
+      alert("Correct!");
+      game.correct++;
+      $('#correct').text(game.correct);
+      $('#question').html('');
+      $('#answer0').html('');
+      $('#answer1').html('');
+      $('#answer2').html('');
+      $('#answer3').html('');
+
+  }
+});
+$( "#answer1" ).on( "click", function() {
+    if ($(`#answer1:contains('${game.answer[0]}')`).length) {
+      alert("Correct!");
+      game.correct++;
+      $('#correct').text(game.correct);
+      $('#question').html('');
+      $('#answer0').html('');
+      $('#answer1').html('');
+      $('#answer2').html('');
+      $('#answer3').html('');
+  }
+});
+$( "#answer2" ).on( "click", function() {
+    if ($(`#answer2:contains('${game.answer[0]}')`).length) {
+      alert("Correct!");
+      game.correct++;
+      $('#correct').text(game.correct);
+      $('#question').html('');
+      $('#answer0').html('');
+      $('#answer1').html('');
+      $('#answer2').html('');
+      $('#answer3').html('');
+  }
+});
+$( "#answer3" ).on( "click", function() {
+    if ($(`#answer3:contains('${game.answer[0]}')`).length) {
+      alert("Correct!");
+      game.correct++;
+      $('#correct').text(game.correct);
+      $('#question').html('');
+      $('#answer0').html('');
+      $('#answer1').html('');
+      $('#answer2').html('');
+      $('#answer3').html('');
+  }
+});
+ //////////////////////
+$( "#next" ).on( "click", function() {
+    $('#question').text(game.questions[1]);
+$('#answer0').text(game.answers[1][0]);
+$('#answer1').text(game.answers[1][1]);
+$('#answer2').text(game.answers[1][2]);
+$('#answer3').text(game.answers[1][3]);
+});
+//////////////////
+
+$( "#answer0" ).on( "click", function() {
+    if ($(`#answer0:contains('${game.answer[1]}')`).length) {
+      alert("Correct!");
+      game.correct++;
+      $('#correct').text(game.correct);
+      $('#question').html('');
+      $('#answer0').html('');
+      $('#answer1').html('');
+      $('#answer2').html('');
+      $('#answer3').html('');
+      stop();
+
+  }
+});
+$( "#answer1" ).on( "click", function() {
+    if ($(`#answer1:contains('${game.answer[1]}')`).length) {
+      alert("Correct!");
+      game.correct++;
+      $('#correct').text(game.correct);
+      $('#question').html('');
+      $('#answer0').html('');
+      $('#answer1').html('');
+      $('#answer2').html('');
+      $('#answer3').html('');
+      stop();
+  }
+});
+$( "#answer2" ).on( "click", function() {
+    if ($(`#answer2:contains('${game.answer[1]}')`).length) {
+      alert("Correct!");
+      game.correct++;
+      $('#correct').text(game.correct);
+      $('#question').html('');
+      $('#answer0').html('');
+      $('#answer1').html('');
+      $('#answer2').html('');
+      $('#answer3').html('');
+      stop();
+  }
+});
+$( "#answer3" ).on( "click", function() {
+    if ($(`#answer3:contains('${game.answer[1]}')`).length) {
+      alert("Correct!");
+      game.correct++;
+      $('#correct').text(game.correct);
+      $('#question').html('');
+      $('#answer0').html('');
+      $('#answer1').html('');
+      $('#answer2').html('');
+      $('#answer3').html('');
+      stop();
+  }
+});
+ //////////////////////
+ $( "#next" ).on( "click", function() {
+    $('#question').text(game.questions[2]);
+$('#answer0').text(game.answers[2][0]);
+$('#answer1').text(game.answers[2][1]);
+$('#answer2').text(game.answers[2][2]);
+$('#answer3').text(game.answers[2][3]);
+});
+//////////////////
+
+$( "#answer0" ).on( "click", function() {
+    if ($(`#answer0:contains('${game.answer[2]}')`).length) {
+      alert("Correct!");
+      game.correct++;
+      $('#correct').text(game.correct);
+      $('#question').html('');
+      $('#answer0').html('');
+      $('#answer1').html('');
+      $('#answer2').html('');
+      $('#answer3').html('');
+      stop();
+  }
+});
+$( "#answer1" ).on( "click", function() {
+    if ($(`#answer1:contains('${game.answer[2]}')`).length) {
+      alert("Correct!");
+      game.correct++;
+      $('#correct').text(game.correct);
+      $('#question').html('');
+      $('#answer0').html('');
+      $('#answer1').html('');
+      $('#answer2').html('');
+      $('#answer3').html('');
+      stop();
+  }
+});
+$( "#answer2" ).on( "click", function() {
+    if ($(`#answer2:contains('${game.answer[2]}')`).length) {
+      alert("Correct!");
+      game.correct++;
+      $('#correct').text(game.correct);
+      $('#question').html('');
+      $('#answer0').html('');
+      $('#answer1').html('');
+      $('#answer2').html('');
+      $('#answer3').html('');
+      stop();
+  }
+});
+$( "#answer3" ).on( "click", function() {
+    if ($(`#answer3:contains('${game.answer[2]}')`).length) {
+      alert("Correct!");
+      game.correct++;
+      $('#correct').text(game.correct);
+      $('#question').html('');
+      $('#answer0').html('');
+      $('#answer1').html('');
+      $('#answer2').html('');
+      $('#answer3').html('');
+      stop();
+  }
+});
+ //////////////////////
+ $( "#next" ).on( "click", function() {
+    $('#question').text(game.questions[3]);
+$('#answer0').text(game.answers[3][0]);
+$('#answer1').text(game.answers[3][1]);
+$('#answer2').text(game.answers[3][2]);
+$('#answer3').text(game.answers[3][3]);
+});
+//////////////////
+
+$( "#answer0" ).on( "click", function() {
+    if ($(`#answer0:contains('${game.answer[3]}')`).length) {
+      alert("Correct!");
+      game.correct++;
+      $('#correct').text(game.correct);
+      $('#question').html('');
+      $('#answer0').html('');
+      $('#answer1').html('');
+      $('#answer2').html('');
+      $('#answer3').html('');
+
+  }
+});
+$( "#answer1" ).on( "click", function() {
+    if ($(`#answer1:contains('${game.answer[3]}')`).length) {
+      alert("Correct!");
+      game.correct++;
+      $('#correct').text(game.correct);
+      $('#question').html('');
+      $('#answer0').html('');
+      $('#answer1').html('');
+      $('#answer2').html('');
+      $('#answer3').html('');
+  }
+});
+$( "#answer2" ).on( "click", function() {
+    if ($(`#answer2:contains('${game.answer[3]}')`).length) {
+      alert("Correct!");
+      game.correct++;
+      $('#correct').text(game.correct);
+      $('#question').html('');
+      $('#answer0').html('');
+      $('#answer1').html('');
+      $('#answer2').html('');
+      $('#answer3').html('');
+  }
+});
+$( "#answer3" ).on( "click", function() {
+    if ($(`#answer3:contains('${game.answer[3]}')`).length) {
+      alert("Correct!");
+      game.correct++;
+      $('#correct').text(game.correct);
+      $('#question').html('');
+      $('#answer0').html('');
+      $('#answer1').html('');
+      $('#answer2').html('');
+      $('#answer3').html('');
+  }
+});
+  
+    
+    </script>
+</body>
+</html>
